@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.hostedredmine.com/" />
+<title>hostedredmine</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">hostedredmine</td></tr>
+</thead><tbody>
+<!--打开被测网站-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--对登录功能进行测试-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=登录</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>123456aa</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>gmy1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=login</td>
+	<td></td>
+</tr>
+<!--项目打开功能测试-->
+<tr>
+	<td>selectAndWait</td>
+	<td>id=project_quick_jump_box</td>
+	<td>label=regexp:\s+» Assignment</td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>概述 - Assignment - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>概述 - Assignment - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<!--新建问题功能测试-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=新建问题</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=issue_subject</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=issue_description</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=issue_assigned_to_id</td>
+	<td>label=&lt;&lt; 我 &gt;&gt;</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Task #*: 123 - Assignment - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>Task #*</td>
+</tr>
+<!--问题关闭功能的测试-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=我的工作台</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css= td.subject &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=编辑</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=issue_status_id</td>
+	<td>label=Closed</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#issue-form &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Task #*: 123 - Assignment - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Task #*: 123 - Assignment - Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.details &gt; li</td>
+	<td>状态 从 New 变更为 Closed</td>
+</tr>
+<!--退出功能的测试-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Online Project Management :: Free Redmine Hosting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#top-menu &gt; ul</td>
+	<td>主页 项目 帮助</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,82 @@
+创建文件 mkdir ***
+初始化仓库  git init
+
+查看当前文件状态   git status
+
+跟踪文件   git  add ***(一个文件从工作区进入暂存区)
+
+从暂存区进入工作区：git rm(有提示)
+
+提交到仓库：git commit -m"create ***"
+
+打开文件  cd  **/
+
+查看当前文件下的文件夹： ls
+
+目录中的隐藏文件：ls -a
+
+查看上一级目录：ls ../
+
+查看当前目录：pwd
+
+创建目录：mkdir ls
+
+ls  /c >a.txt 直接
+
+查看版本信息（日志）：git log
+【commit 0950bfd1f9d21f2ae325d95c043cc592820f8d19（ID）
+Author: 高梦瑶 <1819291594@qq.com>
+Date:   Wed Nov 23 11:06:39 2016 +0800】
+用一行描述：git log --oneline
+
+将log信息储存入b:git log>b.txt
+查看b:cat b.txt
+
+a.txt编辑器：vim a.txt
+将光标移动到要删除的内容输入dd及删除
+保存：shift+:（发起命令）然后输入wq，回车后保存
+
+版本比较差异： git diff(被删除部分变为红色，表示已被删除)
+a.txt已经在版本里，直接提交：git commit -a -m“删除了**”
+
+远程：
+建立远程连接：git remote add origin https://github.com/（网址）
+              git remote -v
+（将本地文件上传到在线GitHub）              git push origin master
+ACT LOG=
+
+将在线文件传到本地文件中：git clone 网址（要先创建文件夹）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DNS： 202.206.192.33
+IP：172.18.69.73

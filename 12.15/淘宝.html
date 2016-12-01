@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.taobao.com/" />
+<title>淘宝</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">淘宝</td></tr>
+</thead><tbody>
+<!--打开淘宝主页-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--对淘宝主页进行验证-->
+<tr>
+	<td>assertTitle</td>
+	<td>淘宝网 - 淘！我喜欢</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=淘宝网</td>
+	<td>淘宝网</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=淘宝网</td>
+	<td>淘宝网</td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>淘宝网 - 淘！我喜欢</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h3</td>
+	<td>主题市场</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3</td>
+	<td>主题市场</td>
+</tr>
+<!--对搜索栏进行自动化测试和验证-->
+<tr>
+	<td>click</td>
+	<td>id=q</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=q</td>
+	<td>女鞋秋冬</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn-search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>女鞋秋冬_淘宝搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>女鞋秋冬_淘宝搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.inner.tpl-metis</td>
+	<td>您好 ，“女鞋秋冬” 相关的宝贝： 黄钻爱买店铺 找到 500+ 件 回头客爱买店铺 找到 500+ 件</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.inner.tpl-metis</td>
+	<td>您好 ，“女鞋秋冬” 相关的宝贝： 黄钻爱买店铺 找到 500+ 件 回头客爱买店铺 找到 500+ 件</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
